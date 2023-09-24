@@ -1,0 +1,104 @@
+html {
+    height: 100%;
+  }
+  
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Noto Sans Thai', sans-serif;
+    position: relative;
+    min-height: 100%;
+    background-image: url("/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.footer-table_content {
+    flex: 1;
+}
+
+.footer-table {
+    width: 100%;
+    height: 3%;
+    background-color: #FF9933;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.footer-text {
+    color: white;
+    font-size: 12px;
+    padding: 8px 0;
+    text-align: center;
+}
+
+#table_content {
+    border-collapse: collapse;
+    width: 90%;
+}
+
+#table_content td,
+#table_content th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+/* #table_content tr:first-child td {
+    background-color: #fff;
+} */
+
+/* #table_content tr:nth-child(even) {
+    background-color: #f2f2f2;
+} */
+
+#table_content .column, #table_content tr:first-child td {
+    background-color: #f2f2f2;
+}
+
+#table_content .column ~ tr:hover {
+    background-color: #ddd;
+}
+
+#table_content .column ~ tr {
+    background-color: #fff;
+}
+
+#table_content th, #table_header th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #FF9933;
+    color: white;
+}
+
+.nav-text {
+    color: white;
+}
+
+.btn-orange {
+    color: #FF9933;
+    border: 2px solid #FF9933;
+}
+
+.btn-orange:hover {
+    background-color: #FF9933;
+    color: white;
+}
+
+.btn-delete {
+    color: #FF0000;
+    border: 2px solid #FF0000;
+}
+
+.btn-delete:hover {
+    background-color: #FF0000;
+    color: white;
+}
