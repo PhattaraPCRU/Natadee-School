@@ -5,6 +5,7 @@
         <td align="center" valign="middle">
             <div class="footer-text">
                 Copyright © All Rights Reserved 2023 GitHub/PhattaraPCRU (จัดทำโดย : นายภัทร เที่ยงตรง 641102064111)
+                Powered by <a href="https://phattara.tk" style="color: #fff;">Phattara.TK</a>
             </div>
         </td>
     </tr>
