@@ -17,9 +17,10 @@ $result = mysqli_execute_query($conn ,$sql) or die(mysqli_error($conn));
         <table width="80%" border="1" id="table_content">
           <tbody>
             <tr>
-              <th width="80%" colspan="4" align="center">List of Students</th>
+              <th width="80%" colspan="4" align="center">List of Parent</th>
 			  <td width="20%" align="center">
-          <button class="btn btn-orange" onclick="window.location.href='add/'" style="width: 40%">New</button>
+          <button class="btn btn-orange" onclick="window.location.href='add/'" style="width: auto">New</button>
+          <button class="btn btn-orange me-1" onclick="window.location.href='../'" style="width: auto">Student</button>
         </td>
             </tr>
             <tr class="column">
