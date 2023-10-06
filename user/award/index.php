@@ -23,9 +23,9 @@ $result = mysqli_execute_query($conn, $sql) or die(mysqli_error($conn));
         </td>
       </tr>
       <tr class="column">
-        <td width="10%"><b>Award Name</b></td>
-        <td width="35%"><b>Year</b></td>
+        <td width="35%"><b>Award Name</b></td>
         <td width="35%"><b>From</b></td>
+        <td width="10%"><b>Year</b></td>
         <td width="20%" align="center"><b>Manage</b></td>
       </tr>
       <?php
@@ -36,10 +36,10 @@ $result = mysqli_execute_query($conn, $sql) or die(mysqli_error($conn));
           <?php echo "$rs[a_name]"; ?>
         </td>
         <td>
-          <?php echo "$rs[a_year]"; ?>
+          <?php echo "$rs[a_org]"; ?>
         </td>
         <td>
-          <?php echo "$rs[a_org]"; ?>
+          <?php echo "$rs[a_year]"; ?>
         </td>
         <td align="center">
           <button class="btn btn-delete" onclick="window.location.href='delete/?a_id=<?php echo $rs['a_id']; ?>'">Delete</button>
