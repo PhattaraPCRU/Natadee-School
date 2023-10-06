@@ -36,9 +36,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->bind_param("ssssssii", $i_password, $i_name, $i_address, $i_tel, $i_pic, $po_id, $d_id, $i_id);
     }
     if ($stmt->execute()) {
-        $response = array('status' => 'success', 'message' => 'Instructor information updated successfully.');
+        $response = array('status' => 'success', 'message' => 'Instructor information updated successfully.', 'callback' => 'location.reload();');
     } else {
-        $response = array('status' => 'error', 'message' => 'Failed to update instructor information.');
+        $response = array('status' => 'error', 'message' => 'Failed to update instructor information.', 'callback' => 'location.reload();');
     }
 
     $stmt->close();
