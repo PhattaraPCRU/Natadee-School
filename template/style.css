@@ -8,7 +8,7 @@ body {
     font-family: 'Noto Sans Thai', sans-serif;
     position: relative;
     min-height: 100%;
-    background-image: url("/bg.jpg");
+    /* background-image: url("/bg.jpg"); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -101,4 +101,39 @@ body {
 .btn-delete:hover {
     background-color: #FF0000;
     color: white;
+}
+
+/* Login Page Css */
+.login-table {
+    width: 400px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+.header-cell {
+    background-color: #ff9933;
+    text-align: center;
+    font-weight: bold;
+}
+
+.label-cell {
+    width: 120px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* Rainbow Text */
+
+.rainbow-text {
+    background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbow 10s linear infinite;
 }
