@@ -118,25 +118,7 @@ $result = $result->fetch_assoc();
                         <button type="reset" class="btn btn-delete me-1">Reset</button>
                         <button type="button" class="btn btn-delete" onclick="window.location.href = '../'">Cancel</button>
                         <script>
-                            const submitButton = document.querySelector('button[type="submit"]');
-                            
-                            submitButton.addEventListener('click', function(e) {
-                                e.preventDefault();
-                                const form = document.querySelector('form');
-                                const formData = new FormData(form);
-                                const xhr = new XMLHttpRequest();
-                                xhr.open('POST', form.action, true);
-                                xhr.onload = function() {
-                                    if (xhr.status === 200) {
-                                        swal_callback('Success', xhr.response.message, 'success', 'OK', function() {
-                                            window.location.href = '../';
-                                        });
-                                    } else {
-                                        swal.fire('Error', xhr.response.message, 'error');
-                                    }
-                                };
-                                xhr.send(formData);
-                            });
+                            submitApply();
                         </script>
                     </td>
                 </tr>
