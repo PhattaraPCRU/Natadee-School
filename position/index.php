@@ -1,4 +1,5 @@
 <?php
+$page_permission = 2;
 include('../php/utility_loader.php');
 
 $result = mysqli_execute_query($conn ,"SELECT * FROM position");

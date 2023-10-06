@@ -1,15 +1,10 @@
 <?php
+$page_permission = 1;
 include('../../php/utility_loader.php');
-session_start();
-if(!isset($_SESSION["valid_uname"]) || !isset($_SESSION["valid_pwd"]) || !isset($_SESSION["valid_instructor"])){
-    echo "<script> swal_callback('Error', 'Please Login', 'error', 'OK', function() { window.location.href = '../../'; });</script>";
-    exit();
-}else{
-    $sql = "SELECT * FROM instructor WHERE i_username='".$_SESSION["valid_uname"]."' AND i_password='".$_SESSION["valid_pwd"]."'";
-    $result = $conn->query($sql);
-    $result = $result->fetch_assoc();
+$sql = "SELECT * FROM instructor WHERE i_username='".$_SESSION["username"]."'";
+$result = $conn->query($sql);
+$result = $result->fetch_assoc();
 
-}
 ?>
 <html>
     <head>
@@ -115,29 +110,10 @@ if(!isset($_SESSION["valid_uname"]) || !isset($_SESSION["valid_pwd"]) || !isset(
                 </tr>
                 <tr>
                     <td colspan="2" align="center">
-                        <button type="submit" class="btn btn-orange me-1">Submit</button>
+                        <button type="submit" class="btn btn-orange me-1">Save</button>
                         <button type="reset" class="btn btn-delete me-1">Reset</button>
-                        <button type="button" class="btn btn-delete" onclick="window.location.href = '../'">Cancel</button>
                         <script>
-                            const submitButton = document.querySelector('button[type="submit"]');
-                            
-                            submitButton.addEventListener('click', function(e) {
-                                e.preventDefault();
-                                const form = document.querySelector('form');
-                                const formData = new FormData(form);
-                                const xhr = new XMLHttpRequest();
-                                xhr.open('POST', form.action, true);
-                                xhr.onload = function() {
-                                    if (xhr.status === 200) {
-                                        swal_callback('Success', xhr.response.message, 'success', 'OK', function() {
-                                            window.location.href = '../';
-                                        });
-                                    } else {
-                                        swal.fire('Error', xhr.response.message, 'error');
-                                    }
-                                };
-                                xhr.send(formData);
-                            });
+                            submitApply();
                         </script>
                     </td>
                 </tr>

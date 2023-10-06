@@ -1,4 +1,5 @@
 <?php
+$page_permission = 2;
 include('../php/utility_loader.php');
 
 $result = mysqli_execute_query($conn ,"SELECT i.i_id, i.i_name, p.po_name, d.d_name, d.d_id, p.po_id FROM instructor AS i JOIN position AS p ON i.po_id = p.po_id JOIN department AS d ON i.d_id = d.d_id;");

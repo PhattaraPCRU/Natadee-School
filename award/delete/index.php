@@ -1,4 +1,5 @@
 <?php
+$page_permission = 2;
 include('../../php/utility_loader.php');
 
 $a_id = $_GET["a_id"];

@@ -1,4 +1,5 @@
 <?php
+$page_permission = 2;
 include('../../php/utility_loader.php');
 
 $sql = "SELECT * FROM student WHERE s_id = '".$_GET['s_id']."'";
@@ -37,7 +38,7 @@ $result = mysqli_fetch_array($result);
                     <td width="20%">Image</td>
                     <td width="80%">
                         <div id="previewContainer" style="display: block;">
-                            <img id="previewImage" src="" height="180px">
+                            <img id="previewImage" src="../../res/img/loading_cockroach.gif" height="180px">
                         </div>
                         <input id="fileInput" class="form-control" type="file" name="s_pic" accept="image/png, image/jpeg, image/jpg, image/gif">
                         <script>

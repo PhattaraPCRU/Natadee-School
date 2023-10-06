@@ -1,4 +1,5 @@
 <?php
+$page_permission = 2;
 include('../../php/utility_loader.php');
 
 $i_id = $_GET['i_id'];
@@ -45,13 +46,15 @@ $result = $result->fetch_assoc();
                     <td width="20%">Image</td>
                     <td width="80%">
                         <div id="previewContainer" style="display: block;">
-                            <img id="previewImage" src="../../res/upload/<?php echo $result['i_pic']; ?>" height="180px">
+                            <img id="previewImage" src="../../res/img/loading_cockroach.gif" height="180px">
                         </div>
                         <input id="fileInput" class="form-control" type="file" name="i_pic" accept="image/png, image/jpeg, image/jpg, image/gif">
                         <script>
                             <?PHP
                             if($result['i_pic'] == ""){
                                 echo "document.getElementById('previewImage').src = '../../res/img/No_Image_Available.jpg';";
+                            }else{
+                                echo "document.getElementById('previewImage').src = '../../res/upload/".$result['i_pic']."';";
                             }
                             ?>
                             const fileInput = document.getElementById('fileInput');

@@ -1,20 +1,22 @@
 <?php
+$page_permission = 2;
 include('../../php/utility_loader.php');
 ?>
 <html>
-    <head>
-        <title>Add Student</title>
-    </head>
-    <body>
-    <div class="footer-wrapper">
-        <?php include_once '../../php/nav_loader.php'; ?>
-        <div class="footer-content" align="center">
-            <!-- Content Here -->
+<head>
+    <title>Add Student</title>
+</head>
+<body>
+<div class="footer-wrapper">
+    <?php include_once '../../php/nav_loader.php'; ?>
+    <div class="footer-content" align="center">
+        <!-- Content Here -->
         <table style="width: 40%;" border="1" id="table_content">
             <tr>
                 <th colspan="2" align="center">Add Student</th>
             </tr>
-            <form action="../../php/sql/sql_student.php"><input type="hidden" name="operation" value="add">
+            <form action="../../php/sql/sql_student.php">
+                <input type="hidden" name="operation" value="add">
                 <tr>
                     <td width="20%">Name</td>
                     <td width="80%"><input class="form-control" type="text" name="s_name" value=""></td>
@@ -69,6 +71,7 @@ include('../../php/utility_loader.php');
                                 echo "<option value='".$row['p_id']."'>".$row['p_name']."</option>";
                             }
                             ?>
+                        </select>
                     </td>
                 </tr>
                 <tr>
@@ -83,6 +86,7 @@ include('../../php/utility_loader.php');
                                 echo "<option value='".$row['c_id']."'>".$row['c_name']."</option>";
                             }
                             ?>
+                        </select>
                     </td>
                 </tr>
                 <tr>
@@ -97,12 +101,12 @@ include('../../php/utility_loader.php');
                 </tr>
             </form>
         </table>
-        </div>
-        <?PHP include_once '../../php/footer_loader.php'; ?>
     </div>
-    <!-- <script src="/js/ajax_delete.js"></script> -->
-    <div id="scriptContainer">
-    </div>
-    <?php include_once '../../php/post_loaderV2.php'; ?>
-    </body>
+    <?PHP include_once '../../php/footer_loader.php'; ?>
+</div>
+<!-- <script src="/js/ajax_delete.js"></script> -->
+<div id="scriptContainer">
+</div>
+<?php include_once '../../php/post_loaderV2.php'; ?>
+</body>
 </html>

@@ -1,4 +1,5 @@
 <?php
+$page_permission = 2;
 include('../php/utility_loader.php');
 
 $sql = "SELECT * FROM student";
@@ -51,6 +52,7 @@ $result = mysqli_execute_query($conn ,$sql) or die(mysqli_error($conn));
           ?>
         </td>
         <td align="center">
+          <button class="btn btn-orange me-1" onclick="window.location.href='detail/?s_id=<?php echo $rs['s_id']; ?>'">Detail</button>
           <button class="btn btn-orange me-1" onclick="window.location.href='edit/?s_id=<?php echo $rs['s_id']; ?>'">Edit</button>
           <button class="btn btn-delete" onclick="window.location.href='delete/?s_id=<?php echo $rs['s_id']; ?>'">Delete</button>
         </td>
