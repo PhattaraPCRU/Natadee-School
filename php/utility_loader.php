@@ -52,6 +52,6 @@ echo '<meta charset="utf-8mb4">
 include_once $_SERVER['DOCUMENT_ROOT'] . '/template/font.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/template/bootstrap.php';
 
-echo '<link rel="stylesheet" href="/template/style.css?epoch'.floor(time()).'">' . PHP_EOL;
+echo '<link rel="stylesheet" href="/template/style.css?epoch='.floor(time()).'">' . PHP_EOL;
 echo '<link rel="icon" href="/res/img/yy_genshin230207.gif" type="image/gif">' . PHP_EOL;
 ?>
