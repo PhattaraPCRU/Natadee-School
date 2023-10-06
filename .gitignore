@@ -3,9 +3,11 @@ res/upload/*.jpg
 res/upload/*.jpeg
 res/upload/*.png
 res/upload/*.gif
+res/upload/*.db
 
 # Ignore all pictures in res/upload/student folder
 res/upload/student/*.jpg
 res/upload/student/*.jpeg
 res/upload/student/*.png
 res/upload/student/*.gif
+res/upload/student/*.db
